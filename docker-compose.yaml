@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  bot:
+    build:
+      target: prod
+      context: .
+      dockerfile: ./Dockerfile
+    image: app/app_prod
+    container_name: weather_bot
+    volumes:
+      - .:/app
+    env_file:
+      - ./.env
+    working_dir: /app/weather-bot
+    command: ["poetry", "run", "python", "bot.py"]
