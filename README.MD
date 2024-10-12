@@ -30,5 +30,5 @@ WeatherBot — это Telegram-бот, созданный с использов�
    - Для запуска в режиме разработки выполните команду:
 
     ```shell
-    docker-compose -f docker-compose.yaml up --build
+    docker compose -f docker-compose.yaml up --build
     ```
